@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:model="clr-namespace:MauiWS2.Models"
+             x:Class="MauiWS2.MainPage"
+             Title="Maui WS2 Homework">
+
+    <VerticalStackLayout Padding="10"
+                         Margin="0, 30, 0, 0"
+                         Spacing="24">
+
+        <Grid ColumnDefinitions="*, 50, 50, auto">
+            <Label Text="Good afternoon"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   VerticalTextAlignment="Center"
+                   Grid.Column="0"/>
+            <Label FontFamily="FAR"
+                   Text="bell"
+                   FontSize="22"
+                   VerticalTextAlignment="Center"
+                   Grid.Column="1"/>
+            <Label FontFamily="FAR"
+                   Text="clock"
+                   FontSize="22"
+                   VerticalTextAlignment="Center"
+                   Grid.Column="2"/>
+            <Label FontFamily="FAS"
+                   Text="gear"
+                   FontSize="22"
+                   VerticalTextAlignment="Center"
+                   Grid.Column="3"/>
+        </Grid>
+
+        <HorizontalStackLayout Spacing="7.5">
+            <Border StrokeShape="RoundRectangle 20,20,20,20"
+                    Background="#313131"
+                    Stroke="#313131"
+                    Padding="18, 10">
+                <Label Text="Music"
+                       FontSize="14"
+                       VerticalTextAlignment="Center"/>
+
+            </Border>
+            <Border StrokeShape="RoundRectangle 20,20,20,20"
+                    Background="#313131"
+                    Stroke="#313131"
+                    Padding="18, 10">
+                <Label Text="Podcasts &amp; Shows"
+                       FontSize="14"
+                       VerticalTextAlignment="Center"/>
+
+            </Border>
+        </HorizontalStackLayout>
+
+        <CollectionView>
+            <CollectionView.ItemsSource>
+                <x:Array Type="{x:Type model:AlbumModel}">
+                    <model:AlbumModel Name="The Slim Shady LP"
+                                      Cover="album1.jpg"
+                                      Artist="Eminem" />
+                    <model:AlbumModel Name="The Marshall Mathers LP"
+                                      Cover="album2.jpg"
+                                      Artist="Eminem" />
+                    <model:AlbumModel Name="The Eminem Show"
+                                      Cover="album3.jpg"
+                                      Artist="Eminem" />
+                    <model:AlbumModel Name="All Eyez On Me"
+                                      Cover="album4.jpg"
+                                      Artist="2Pac" />
+                    <model:AlbumModel Name="Get Rick Or Die Tryin'"
+                                      Cover="album5.jpg"
+                                      Artist="50 Cent" />
+                    <model:AlbumModel Name="Devils Night"
+                                      Cover="album6.jpg"
+                                      Artist="D12" />
+                </x:Array>
+            </CollectionView.ItemsSource>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid ColumnDefinitions="auto, *"
+                          RowDefinitions="*, *"
+                          BackgroundColor="#313131">
+                        <Image Grid.RowSpan="2"
+                               Source="{Binding Cover}"
+                               HeightRequest="66"
+                               WidthRequest="66" />
+                        <Label Text="{Binding Name}"
+                               Grid.Column="1"
+                               HorizontalTextAlignment="Center"
+                               VerticalTextAlignment="Center"
+                               FontAttributes="Bold"
+                               FontSize="12"/>
+                        <Label Text="{Binding Artist}"
+                               Grid.Column="1"
+                               Grid.Row="1"
+                               HorizontalTextAlignment="Center"
+                               VerticalTextAlignment="Center"
+                               FontAttributes="Bold"
+                               FontSize="12"/>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Orientation="Vertical"
+                                 Span="2" 
+                                 VerticalItemSpacing="10"
+                                 HorizontalItemSpacing="10"/>
+            </CollectionView.ItemsLayout>
+        </CollectionView>
+
+        <Grid RowDefinitions="*, *"
+              ColumnDefinitions="auto, *"
+              ColumnSpacing="15">
+            <Image Grid.RowSpan="2"
+                   Source="artist.jpg"
+                   WidthRequest="80"
+                   HeightRequest="80" >
+                <Image.Clip>
+                    <EllipseGeometry RadiusX="40"
+                                     RadiusY="40"
+                                     Center="40, 40" />
+                </Image.Clip>
+            </Image>
+            <Label Text="MORE LIKE"
+                   FontAttributes="Bold"
+                   TextColor="#919191"
+                   VerticalTextAlignment="End"
+                   FontSize="12"
+                   Grid.Column="1" />
+            <Label Text="Eminem"
+                   FontAttributes="Bold"
+                   FontSize="25"
+                   VerticalTextAlignment="Start"
+                   Grid.Column="1"
+                   Grid.Row="1"/>
+        </Grid>
+
+    </VerticalStackLayout>
+    
+</ContentPage>
