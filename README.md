@@ -3,7 +3,7 @@
   Implementarea a fost realizata urmarind indicatiile din Workshop.
   - MainPage-ul este realizat pe un VerticalStack, urmand ca fiecare grup
 de "butoane" sa fie asezat in diverse Layout-uri dupa caz
-  - Pentru primul grup (iconite + Good afernoon) am folosit un Grid astfel 
+  - Pentru primul grup (iconite + Good afternoon) am folosit un Grid astfel 
 incat sa pot gestiona distanta  dintre label si iconite
   - Urmatoarele 2 label-uri au fost asezate pe un HorizontalStack si in cate
 un Border pentru fundalul gri
