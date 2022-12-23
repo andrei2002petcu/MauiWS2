@@ -68,7 +68,7 @@
                     <model:AlbumModel Name="All Eyez On Me"
                                       Cover="album4.jpg"
                                       Artist="2Pac" />
-                    <model:AlbumModel Name="Get Rick Or Die Tryin'"
+                    <model:AlbumModel Name="Get Rich Or Die Tryin'"
                                       Cover="album5.jpg"
                                       Artist="50 Cent" />
                     <model:AlbumModel Name="Devils Night"
