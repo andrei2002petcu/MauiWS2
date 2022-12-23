@@ -12,4 +12,4 @@ colectie intr-un Grid
   - Ultimul grup a fost asezat intr-un Grid, iar poza a fost facuta rotunda
 folosind Clipping
 
-![Screenshot_1](https://user-images.githubusercontent.com/94044661/209363949-403e0a33-c9af-4297-b719-ce9e464c44d1.png)
+![Screenshot_1](https://user-images.githubusercontent.com/94044661/209367745-80e44d94-b4ce-4209-b219-463885760ed9.png)
